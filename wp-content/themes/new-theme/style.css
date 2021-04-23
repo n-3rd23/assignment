@@ -1,0 +1,157 @@
+/*
+Theme Name: Instant API Theme
+Author: alan
+Version: 1.0
+*/
+
+body {
+	font-family: 'Lato';
+}
+a {
+	text-decoration: none;
+} 
+a:hover {
+	text-decoration: none;
+}
+.bg-pink {
+	background: #F27D7E !important;
+}
+.bg-green {
+	background: #28B24D !important;
+}
+.bg-blue {
+	background: #5C72B6 !important;
+}
+.bg-yellow {
+	background: #FFCA1A !important;
+}
+.text-small {
+	font-size: 20px;
+}
+.text-large {
+	font-size: 30px;
+}
+.fw-100 {
+	font-weight: 100;
+}
+.fw-200 {
+	font-weight: 200;
+}
+.fw-300 {
+	font-weight: 300;
+}
+.fw-400 {
+	font-weight: 400;
+}
+.fw-500 {
+	font-weight: 500;
+}
+.fw-600 {
+	font-weight: 600;
+}
+.fw-700 {
+	font-weight: 700;
+}
+.fw-800 {
+	font-weight: 800;
+}
+.fw-900 {
+	font-weight: 900;
+}
+.nav-item:hover {
+	color: black;
+}
+.logo {
+	font-size: 1.5rem; 
+	font-weight: 700
+}
+.btn-btn__primary {
+	color: white;
+	background: #5C72B6;
+
+}
+.hero {
+	line-height: 1.04;
+}
+.hero-main_text {
+	font-size: 45px; 
+	font-weight: 800;
+}
+.colorful {
+	background-image: linear-gradient(to right, #6B27FD , #FD278E);
+	background-clip: text;
+	color: transparent;
+	font-weight: 800;
+	font-size: 20px;
+}
+.img-dots {
+	width: 70px;
+}
+.img-dots_left {
+	top: 0;
+	left: 0;
+}
+.img-dots_right {
+	top: 0;
+	right: 0;
+}
+.raddison {
+	width: 100px;
+	display: inline;
+}
+.section-description {
+
+}
+.list-item {
+	border-left: 2px solid #E0E0E0;
+	padding-left: 20px;
+}
+.list-item_active {
+	border-left: 2px solid #F27D7E;
+	color: #F27D7E;
+}
+.customer-review {
+	margin-top: 150px;
+}
+.profile-img-wrapper {
+	top:-40%;
+	left: 0;
+	display: flex;
+	/*align-items: center;*/
+	justify-content: center;
+	width: 100%;
+}
+.profile-img  {
+	border-radius: 50%;
+}
+.mob-nav {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.navigation {
+		display: none;
+	}
+	.img-dots_left, .img-dots_right {
+		display: none;
+	}
+	.mob-nav {
+		display: block;
+	}
+	.nav-toggle-btn-img {
+		width: 50px;
+		padding: 10px;
+		cursor: pointer;
+	}
+	.mob-nav-items {
+		background-color: white;
+		height: 100vh;
+		padding: 20px;
+		display: none;
+	}
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
