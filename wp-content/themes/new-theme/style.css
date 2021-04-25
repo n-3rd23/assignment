@@ -70,8 +70,28 @@ a:hover {
 	background: #5C72B6;
 
 }
+.hero-wrapper {
+	min-height: 100vh;
+}
 .hero {
+	height: 100vh;
 	line-height: 1.04;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*align-items: center;*/
+}
+.banner-img-wrapper  {
+	display: flex;
+	/*align-items: center;*/
+	/*justify-content: center;*/
+}
+.bannerimg {
+	object-fit: cover;
+	object-position: center;
+	left: -10%;
+	/*height: 100%;*/
+	width: 100%;	
 }
 .hero-main_text {
 	font-size: 45px; 
@@ -79,10 +99,18 @@ a:hover {
 }
 .colorful {
 	background-image: linear-gradient(to right, #6B27FD , #FD278E);
+	/*background: -webkit-gradient(linear, left top, right top, color-stop(0%,#87e0fd), color-stop(40%,#53cbf1), color-stop(100%,#05abe0));*/
 	background-clip: text;
+	-webkit-background-clip: text;
 	color: transparent;
 	font-weight: 800;
-	font-size: 20px;
+	font-size: 30px;
+}
+.colorful::before {
+	content: "Instant APIs.";
+	animation-name: colorfulanime;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
 }
 .img-dots {
 	width: 70px;
@@ -127,7 +155,31 @@ a:hover {
 .mob-nav {
 	display: none;
 }
+.op {
+	opacity: 1;
+}
+.cp {
+	cursor: pointer;
+}
+.c-card:hover .c-card-img {
+	/*color: red !important;*/
+	background: #F27D7E;
+	transition: ease .3s;
+}
+.collapse {
+	transition: easein .3s
+}
+.show {
+	/*transition: .3s*/
+	animation-name: dorpanime;
+	animation-duration: .5s;
+	/*animation-iteration-count: 2s;*/
+	/*background-color: red;*/
+	/*opacity: 0;*/
+	/*height: 0px;*/
+	overflow: hidden;
 
+}
 @media only screen and (max-width: 768px) {
 	.navigation {
 		display: none;
@@ -149,9 +201,93 @@ a:hover {
 		padding: 20px;
 		display: none;
 	}
+	.banner-img-wrapper {
+		display: none;
+	}
+	.stick {
+		display: none;
+	}
+	.drop-img {
+		display: none;
+	}
+	.app-icons {
+		flex-direction: column;
+	}
 }
-
+.rotate {
+	transform: rotate(180deg);
+	animation-name: rotateanime;
+	animation-duration: .2s;
+	/*transition: .3s;*/
+}
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
+}
+
+@keyframes colorfulanime {
+	25% {
+		content: "Secure";
+		background-image: linear-gradient(to right, #4DC1BD , #F27D7E);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+	50% {
+		content: "Low-Code";
+		background-image: linear-gradient(to right, #6B27FD , #28B24D);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+	75% {
+		content: "Data-Centric";
+		background-image: linear-gradient(to right, #4DC1BD , #F27D7E);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+} 
+
+@keyframes dorpanime {
+	0% {
+		/*height: 0;*/
+		/*background-color: green;*/
+		height: 0%;
+		opacity: 0.1;
+	}	
+	25% {
+		/*height: 0;*/
+		/*background-color: green;*/
+		height: 25%;
+		opacity: 0.3;
+	}	
+	50% {
+		/*height: 0;*/
+		/*background-color: green;*/
+		height: 50%;
+		opacity: 0.5;
+	}	
+	75% {
+		/*height: 0;*/
+		/*background-color: green;*/
+		height: 75%;
+		opacity: 0.7;
+	}	
+	100% {
+		opacity: 1;
+		height: 100%;
+	}
+}
+
+@keyframes rotateanime {
+	25% {
+		transform: rotate(45deg);
+	}
+	50% {
+		transform: rotate(90deg);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
 }

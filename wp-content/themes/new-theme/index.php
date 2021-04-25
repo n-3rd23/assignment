@@ -1,9 +1,10 @@
 <?php get_header();  ?>
-  <div class="container my-4">
+  <div class="container-fluid mb-5 hero-wrapper">
   	<div class="row">
-  		<div class="col-md-8 hero">
+  		<div class="col-md-6 hero">
+        <!-- <div class="pl-5"> -->
   			<div>
-  				<span class="colorful">Instant APIs.</span>
+  				<span class="colorful animate-colorful"></span>
   			</div>
   			<div>
   				<span class="text-white hero-main_text" style="background: #5C72B6;"> API First Backend </span>
@@ -20,9 +21,12 @@
   					<button class="btn btn-btn__primary"><small class="text-white">Book a Demo</small></button>
   				</div>
   			</div>
+        <!-- </div> -->
   		</div>
-  		<div class="col-md-4">
-  			image
+  		<div class="col-md-6 position-reletive banner-img-wrapper">
+        <img class="bannerimg position-absolute img-fluid" src="<?php echo get_theme_file_uri('/images/bannerimg-png-1.png'); ?>" alt="img">
+        <img class="bannerimg position-absolute img-fluid" src="<?php echo get_theme_file_uri('/images/bannerimg-png-2.png'); ?>" alt="img">
+        <!-- <img class="bannerimg img-fluid" src="<?php echo get_theme_file_uri('/images/bannerimg.png'); ?>" alt="img"> -->
   		</div>
   	</div>
   </div>
@@ -66,39 +70,63 @@
 	  			</div>
   			</div>
   			<div class="text-muted mt-5">
-  				<small class="d-block py-2 list-item list-item_active">Buid instant API for your web and mobile apps</small>
-          <small class="d-block py-2 list-item">Buid instant API for your web and mobile apps</small>
-          <small class="d-block py-2 list-item">Buid instant API for your web and mobile apps</small>
-          <small class="d-block py-2 list-item">Buid instant API for your web and mobile apps</small>
+  				<small data-img="<?php echo get_theme_file_uri('/images/add-developement.png'); ?>" class="d-block py-2 list-item list-item_active cp api-list">Buid instant API for your web and mobile apps</small>
+          <small data-img="<?php echo get_theme_file_uri('/images/slideimg-2.png'); ?>" class="d-block py-2 list-item cp api-list">Buid instant API for your web and mobile apps</small>
+          <small data-img="<?php echo get_theme_file_uri('/images/slideimg-3.png'); ?>" class="d-block py-2 list-item cp api-list">Buid instant API for your web and mobile apps</small>
+          <small data-img="<?php echo get_theme_file_uri('/images/slideimg-4.png'); ?>" class="d-block py-2 list-item cp api-list">Buid instant API for your web and mobile apps</small>
   			</div>
         <div class="mt-4">
           <button class="btn btn-btn__primary bg-pink"><small class="text-white">Explore Features</small></button>
         </div>
   		</div>
   		<div class="col-md-6">
-  			<img class="img-fluid" src="<?php echo get_theme_file_uri('/images/add-developement.png'); ?>" alt="">
+  			<img id="slide-img" class="img-fluid" src="<?php echo get_theme_file_uri('/images/add-developement.png'); ?>" alt="">
         <div>
-          <small class="text-muted">
+          <small class="text-muted api_list_content">
             No code needed but jsut a few clicks. Build production grade data rich ReST and GraphQL backend APIs that are ready to be integrated with backend in search sort filter and pagination.
           </small>
         </div>
   		</div>
   	</div>
   </div>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 my-5">
-        <div class="text-large fw-800 text-center" >
+        <div class="text-large fw-800 text-center position-reletive" >
+          <img class="position-absolute stick img-fluid" style="left: 0; top: -50%;" src="<?php echo get_theme_file_uri('/images/color-1.png'); ?>" alt="">
+          <img class="position-absolute stick img-fluid" style="right: 0; top: -50%;" src="<?php echo get_theme_file_uri('/images/color-2.png'); ?>" alt="">
           <span>How can you </span><span class="text-white bg-green">leverage</span><span> around the world</span>
         </div>
         <div class="text-center my-4">
           <small class="text-muted">Build a complete product swiftly with our API-first backend solution</small>
         </div>
+        <div class="d-flex app-icons w-50 mx-auto my-5">
+          <div class="w-50 cp d-flex flex-column align-items-center mx-auto">
+            <img class="img-fluid icon-click mt-3" style="width: 70px;" src="<?php echo get_theme_file_uri('/images/backend-na.svg'); ?>" alt="">
+            <small class="d-block text-muted my-3">Backend as a service</small>
+          </div>
+          <div class="w-50 cp d-flex flex-column align-items-center mx-auto">
+            <img name="<?php echo get_theme_file_uri('/images/api.svg'); ?>" class="img-fluid icon-click" style="width: 70px;" src="<?php echo get_theme_file_uri('/images/api.svg'); ?>" alt="">
+            <small class="d-block text-muted my-3">Backend as a service</small>
+          </div>
+          <div class="w-50 cp d-flex flex-column align-items-center mx-auto">
+            <img name="dataflow" class="img-fluid icon-click" style="width: 70px;" src="<?php echo get_theme_file_uri('/images/dataflow.svg'); ?>" alt="">
+            <small class="d-block text-muted my-3">Backend as a service</small>
+          </div>
+          <div class="w-50 cp d-flex flex-column align-items-center mx-auto">
+            <img name="data" class="img-fluid icon-click" style="width: 70px;" src="<?php echo get_theme_file_uri('/images/data.svg'); ?>" alt="">
+            <small class="d-block text-muted my-3">Backend as a service</small>
+          </div>
+        </div>
         <div class="w-50 mx-auto">
-          <small class="text-muted text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ut, voluptatem libero, provident et rem fugiat amet, porro consequatur, commodi adipisci. Optio natus consequuntur excepturi doloremque expedita facere! Amet, nobis.</small>
+          <small id="icon-content" class="text-muted text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ut, voluptatem libero, provident et rem fugiat amet, porro consequatur, commodi adipisci. Optio natus consequuntur excepturi doloremque expedita facere! Amet, nobis.</small>
         </div>
       </div>
     </div>
+  </div>
+  <div style="min-height: 50vh;" class="container-fluid p-0 position-reletive">
+    <img class="position-absolute img-fluid"  src="<?php echo get_theme_file_uri('/images/line-1.svg'); ?>" alt="">
+    <img class="position-absolute img-fluid"  src="<?php echo get_theme_file_uri('/images/line-2.svg'); ?>" alt="">
   </div>
   <div class="container my-5">
     <div class="row">
@@ -110,39 +138,57 @@
           data stack helps morden IT teams to make the most of their time and resource to build something phenominal
         </div>
       </div>
-      <div class="row my-5">
-        <div class="col-md-4 my-2">
-          <div class="text-small fw-500">Focus on what is more important</div>
+      <div class="row my-5 imp">
+        <div class="col-md-4 c-card my-5">
+          <div class="text-small card-title d-flex fw-500">
+            <img class="img-fluid mx-1  p-1 c-card-img" src="<?php echo get_theme_file_uri('/images/eye.svg'); ?>" alt="">
+            Focus on what is more important
+          </div>
           <div>
             <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ut enim libero temporibus deserunt nihil suscipit officia quam magni ipsum, impedit quas non sapiente sunt rem exercitationem fugit odio fugiat.</small>
           </div>
         </div>
-        <div class="col-md-4 my-2">
-          <div class="text-small fw-500">Focus on what is more important</div>
+        <div class="col-md-4 c-card my-5">
+          <div class="text-small card-title d-flex fw-500">
+            <img class="img-fluid mx-1  p-1 c-card-img" src="<?php echo get_theme_file_uri('/images/eye.svg'); ?>" alt="">
+            Focus on what is more important 1
+          </div>
           <div>
             <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ut enim libero temporibus deserunt nihil suscipit officia quam magni ipsum, impedit quas non sapiente sunt rem exercitationem fugit odio fugiat.</small>
           </div>
         </div>
-        <div class="col-md-4 my-2">
-          <div class="text-small fw-500">Focus on what is more important</div>
+        <div class="col-md-4 c-card my-5">
+          <div class="text-small card-title d-flex fw-500">
+            <img class="img-fluid mx-1  p-1 c-card-img" src="<?php echo get_theme_file_uri('/images/eye.svg'); ?>" alt="">
+            Focus on what is more important
+          </div>
           <div>
             <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ut enim libero temporibus deserunt nihil suscipit officia quam magni ipsum, impedit quas non sapiente sunt rem exercitationem fugit odio fugiat.</small>
           </div>
         </div>
-        <div class="col-md-4 my-2">
-          <div class="text-small fw-500">Focus on what is more important</div>
+        <div class="col-md-4 c-card my-5">
+          <div class="text-small card-title d-flex fw-500">
+            <img class="img-fluid mx-1  p-1 c-card-img" src="<?php echo get_theme_file_uri('/images/eye.svg'); ?>" alt="">
+            Focus on what is more important
+          </div>
           <div>
             <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ut enim libero temporibus deserunt nihil suscipit officia quam magni ipsum, impedit quas non sapiente sunt rem exercitationem fugit odio fugiat.</small>
           </div>
         </div>
-        <div class="col-md-4 my-2">
-          <div class="text-small fw-400">Focus on what is more important</div>
+        <div class="col-md-4 c-card my-5">
+          <div class="text-small card-title d-flex fw-500">
+            <img class="img-fluid mx-1  p-1 c-card-img" src="<?php echo get_theme_file_uri('/images/eye.svg'); ?>" alt="">
+            Focus on what is more important
+          </div>
           <div>
             <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ut enim libero temporibus deserunt nihil suscipit officia quam magni ipsum, impedit quas non sapiente sunt rem exercitationem fugit odio fugiat.</small>
           </div>
         </div>
-        <div class="col-md-4 my-2">
-          <div class="text-small fw-500">Focus on what is more important</div>
+        <div class="col-md-4 c-card my-5">
+          <div class="text-small card-title d-flex fw-500">
+            <img class="img-fluid mx-1  p-1 c-card-img" src="<?php echo get_theme_file_uri('/images/eye.svg'); ?>" alt="">
+            Focus on what is more important
+          </div>
           <div>
             <small class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ut enim libero temporibus deserunt nihil suscipit officia quam magni ipsum, impedit quas non sapiente sunt rem exercitationem fugit odio fugiat.</small>
           </div>
@@ -159,13 +205,25 @@
         </div>
         <div class="mt-4">
           <div class="my-3">   
-            <span class="fw-600">IT Developers</span>
-            <i class="fas fa-angle-down"></i>
+            <span data-target="c1" class="fw-600 d-flex btn-collapse position-reletive cp">
+              IT Executives
+              <!-- <i class="fas fa-angle-down"></i> -->
+              <img class="img-fluid mx-1 c1" src="<?php echo get_theme_file_uri('/images/arrow-down.svg'); ?>" alt="img" />
+            </span>
+            <div id="c1" class="w-50 shadow-sm p-2 collapse cp">   
+              <small style="border-left: 2px solid #5C72B6;" class="d-block text-muted pl-3 mt-3">
+                the progress of the front end developement of your app
+                Backend administration will be taken care of by us.
+              </small>
+            </div>
           </div>
           <div  class="my-3">  
-            <span class="fw-600">IT Executives</span>
-            <i class="fas fa-angle-down"></i>
-            <div class="w-50">   
+            <span data-target="c2" class="fw-600 d-flex btn-collapse position-reletive cp">
+              IT Executives
+              <!-- <i class="fas fa-angle-down"></i> -->
+              <img class="img-fluid mx-1 rotate c2" src="<?php echo get_theme_file_uri('/images/arrow-down.svg'); ?>" alt="img" />
+            </span>
+            <div id="c2" class="w-50 collapse show shadow-sm p-2 cp">   
               <small style="border-left: 2px solid #5C72B6;" class="d-block text-muted pl-3 mt-3">
                 the progress of the front end developement of your app
                 Backend administration will be taken care of by us.
@@ -173,15 +231,24 @@
             </div>
           </div>
           <div class="my-3">   
-            <span class="fw-600">IT Developers</span>
-            <i class="fas fa-angle-down"></i>
+            <span data-target="c3" class="fw-600 d-flex btn-collapse position-reletive cp">
+              IT Executives
+              <!-- <i class="fas fa-angle-down"></i> -->
+              <img class="img-fluid mx-1 c3 btn-collapse" data-target="c3" src="<?php echo get_theme_file_uri('/images/arrow-down.svg'); ?>" alt="img" />
+            </span>
+            <div id="c3" class="w-50 collapse shadow-sm p-2 cp">   
+              <small style="border-left: 2px solid #5C72B6;" class="d-block text-muted pl-3 mt-3">
+                the progress of the front end developement of your app
+                Backend administration will be taken care of by us.
+              </small>
+            </div>
           </div>
           <div class="mt-3">
             <button class="btn btn-btn__primary bg-blue"><small class="text-white">Learn More</small></button>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 drop-img">
         <img style="width:400px;" class="img-fluid rounded" src="<?php echo get_theme_file_uri('/images/group.jpg'); ?>" alt="img">
       </div>
     </div>
